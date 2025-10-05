@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Flayer - Jorge vs Carito</title>
+  <title>Neon Flayer - Edwar vs Rulitos</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -23,6 +23,7 @@
         padding: 20px;
         color: #fff;
         overflow-x: hidden;
+        background: radial-gradient(circle at center, #1a1a3a 0%, #0a0a1a 70%);
     }
     
     .flayer-container {
@@ -37,10 +38,12 @@
         width: 100%;
         height: auto;
         min-height: 1100px;
-        background: radial-gradient(circle at center, #1a1a3a 0%, #0a0a1a 70%);
+        background: rgba(10, 10, 26, 0.8);
         border-radius: 20px;
-        box-shadow: 0 0 50px rgba(100, 50, 255, 0.5),
-                    0 0 100px rgba(0, 200, 255, 0.3);
+        box-shadow: 
+            0 0 20px rgba(255, 0, 204, 0.5),
+            0 0 40px rgba(0, 200, 255, 0.5),
+            0 0 60px rgba(255, 153, 0, 0.3);
         padding: 30px 20px;
         display: flex;
         flex-direction: column;
@@ -50,6 +53,7 @@
         overflow: hidden;
         transform-style: preserve-3d;
         border: 2px solid rgba(100, 100, 255, 0.3);
+        backdrop-filter: blur(5px);
     }
     
     .flayer::before {
@@ -60,9 +64,9 @@
         right: 0;
         bottom: 0;
         background: 
-            radial-gradient(circle at 20% 30%, rgba(100, 50, 255, 0.2) 0%, transparent 40%),
-            radial-gradient(circle at 80% 70%, rgba(0, 200, 255, 0.2) 0%, transparent 40%),
-            radial-gradient(circle at 40% 80%, rgba(255, 50, 100, 0.2) 0%, transparent 40%);
+            radial-gradient(circle at 20% 30%, rgba(100, 50, 255, 0.3) 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(0, 200, 255, 0.3) 0%, transparent 40%),
+            radial-gradient(circle at 40% 80%, rgba(255, 50, 100, 0.3) 0%, transparent 40%);
         pointer-events: none;
         z-index: 1;
     }
@@ -99,7 +103,7 @@
     }
     
     .vs-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -109,18 +113,35 @@
         background-clip: text;
         color: transparent;
         animation: neonGlow 2s infinite alternate;
-        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+        text-shadow: 
+            0 0 10px #ff00cc, 
+            0 0 20px #ff00cc, 
+            0 0 30px #ff00cc,
+            0 0 40px #ff00cc;
+        position: relative;
     }
     
     @keyframes neonGlow {
         0% {
-            text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+            text-shadow: 
+                0 0 10px #ff00cc, 
+                0 0 20px #ff00cc, 
+                0 0 30px #ff00cc,
+                0 0 40px #ff00cc;
         }
         50% {
-            text-shadow: 0 0 15px #33ccff, 0 0 25px #33ccff, 0 0 35px #33ccff;
+            text-shadow: 
+                0 0 15px #33ccff, 
+                0 0 25px #33ccff, 
+                0 0 35px #33ccff,
+                0 0 45px #33ccff;
         }
         100% {
-            text-shadow: 0 0 10px #ff9900, 0 0 20px #ff9900, 0 0 30px #ff9900;
+            text-shadow: 
+                0 0 10px #ff9900, 
+                0 0 20px #ff9900, 
+                0 0 30px #ff9900,
+                0 0 40px #ff9900;
         }
     }
     
@@ -134,6 +155,7 @@
         animation: pulse 2s infinite alternate;
         line-height: 1.4;
         padding: 0 10px;
+        margin-top: 10px;
     }
     
     .battle-area {
@@ -191,21 +213,6 @@
         box-shadow: 0 0 30px rgba(255, 0, 200, 0.8);
     }
     
-    /* IMÁGENES CIRCULARES */
-    .skill .artist-image {
-        border-color: #ff00cc;
-        background-color: #ff00cc;
-        background-image: url('skill.jpg');
-        box-shadow: 0 0 30px rgba(255, 0, 204, 0.7);
-    }
-
-    .thalia .artist-image {
-        border-color: #33ccff;
-        background-color: #33ccff;
-        background-image: url('thalia.jpg');
-        box-shadow: 0 0 30px rgba(51, 204, 255, 0.7);
-    }
-    
     .artist-image {
         width: 150px;
         height: 150px;
@@ -219,6 +226,7 @@
         background-size: cover;
         background-position: center;
         position: relative;
+        box-shadow: 0 0 20px rgba(255, 0, 204, 0.7);
     }
     
     .artist-image::after {
@@ -259,7 +267,7 @@
         text-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
     }
     
-    .thalia .artist-name {
+    .rulitos .artist-name {
         background: linear-gradient(to right, #33ccff, #00ffcc);
         -webkit-background-clip: text;
         background-clip: text;
@@ -529,6 +537,64 @@
         animation: float 6s infinite ease-in-out;
     }
     
+    /* Nuevos efectos neon */
+    .neon-border {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(45deg, #0a0a1a, #1a1a3a) padding-box,
+                    linear-gradient(45deg, #ff00cc, #33ccff) border-box;
+    }
+    
+    .neon-text {
+        text-shadow: 
+            0 0 5px currentColor,
+            0 0 10px currentColor,
+            0 0 15px currentColor,
+            0 0 20px currentColor;
+        animation: text-flicker 3s infinite alternate;
+    }
+    
+    @keyframes text-flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            text-shadow: 
+                0 0 5px currentColor,
+                0 0 10px currentColor,
+                0 0 15px currentColor,
+                0 0 20px currentColor;
+        }
+        20%, 24%, 55% {
+            text-shadow: none;
+        }
+    }
+    
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+    .countdown-item {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 10px;
+        min-width: 60px;
+        box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+    }
+    
+    .countdown-value {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ff9900;
+        text-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #ccc;
+    }
+    
     /* Media queries para tablets */
     @media (min-width: 768px) {
         .flayer {
@@ -538,7 +604,7 @@
         }
         
         .vs-title {
-            font-size: 4.5rem;
+            font-size: 5rem;
         }
         
         .subtitle {
@@ -582,6 +648,19 @@
         .time-zone {
             flex-direction: column;
             min-width: 140px;
+        }
+        
+        .countdown {
+            gap: 15px;
+        }
+        
+        .countdown-item {
+            min-width: 80px;
+            padding: 15px;
+        }
+        
+        .countdown-value {
+            font-size: 2.2rem;
         }
     }
     
@@ -634,6 +713,19 @@
         .time-zones {
             flex-direction: row;
         }
+        
+        .countdown {
+            gap: 20px;
+        }
+        
+        .countdown-item {
+            min-width: 100px;
+            padding: 20px;
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+        }
     }
 </style>
 </head>
@@ -644,41 +736,89 @@
       <div class="particles" id="particles"></div>
 
       <div class="header">
-        <h1 class="vs-title">VS</h1>
-        <p class="subtitle">Batalla Épica con Retos - Sábado 8:00 pm Hora Peruana</p>
+        <h1 class="vs-title neon-text">EDWAR vs RULITOS</h1>
+        <p class="subtitle">Batalla Épica con Retos - Sábado 9:00 pm Hora Peruana</p>
+        
+        <!-- Contador regresivo -->
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <div class="countdown-value" id="days">00</div>
+            <div class="countdown-label">Días</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="hours">00</div>
+            <div class="countdown-label">Horas</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="minutes">00</div>
+            <div class="countdown-label">Minutos</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="seconds">00</div>
+            <div class="countdown-label">Segundos</div>
+          </div>
+        </div>
       </div>
 
       <div class="battle-area">
-        <div class="artist skill">
-          <div class="artist-image" style="background-image:url('jorge.jpg');"></div>
-          <h2 class="artist-name">Jorge</h2>
+        <div class="artist edwar">
+          <div class="artist-image" style="background-image:url('Edwar.jpg');"></div>
+          <h2 class="artist-name neon-text">Edwar</h2>
           <p class="artist-desc">
             Creador de contenido divertido que siempre busca entretener a su audiencia con su carisma y energía contagiosa. ¡Prepárate para reír!
           </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">95%</div>
+              <div class="stat-name">Humor</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">88%</div>
+              <div class="stat-name">Creatividad</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">92%</div>
+              <div class="stat-name">Carisma</div>
+            </div>
+          </div>
         </div>
 
         <div class="vs-middle">VS</div>
 
-        <div class="artist thalia">
-          <div class="artist-image" style="background-image:url('carito.jpg');"></div>
-          <h2 class="artist-name">Carito</h2>
+        <div class="artist rulitos">
+          <div class="artist-image" style="background-image:url('rulitos.jpg');"></div>
+          <h2 class="artist-name neon-text">rulitos</h2>
           <p class="artist-desc">
-            Creadora de contenido divertido que deslumbra con su estilo único y actitud vibrante. ¡No te pierdas sus ocurrencias graciosas!
+            Creador de contenido divertido que deslumbra con su estilo único y actitud vibrante. ¡No te pierdas sus ocurrencias graciosas!
           </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">90%</div>
+              <div class="stat-name">Humor</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">95%</div>
+              <div class="stat-name">Creatividad</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">87%</div>
+              <div class="stat-name">Carisma</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="event-info">
-        <h2 class="event-title">En Vivo - Duelo de Titanes</h2>
+        <h2 class="event-title neon-text">En Vivo - Duelo de Gigantes</h2>
         <div class="event-details">
           <div class="detail">
             <i class="far fa-calendar-alt"></i>
-            <div class="detail-value">Sábado 04 Octubre 2025</div>
+            <div class="detail-value">Sábado 11 Octubre 2025</div>
             <div class="detail-name">Fecha</div>
           </div>
           <div class="detail">
             <i class="far fa-clock"></i>
-            <div class="detail-value">20:00 HS</div>
+            <div class="detail-value">21:00 HS</div>
             <div class="detail-name">Hora Perú</div>
           </div>
           <div class="detail">
@@ -688,21 +828,23 @@
           </div>
         </div>
 
-        <div class="time-title">HORARIOS POR PAÍS</div>
+        <div class="time-title neon-text">HORARIOS POR PAÍS</div>
         <div class="time-zones">
-          <div class="time-zone">Perú: <span>20:00</span></div>
-          <div class="time-zone">México: <span>19:00</span></div>
-          <div class="time-zone">Argentina: <span>22:00</span></div>
-          <div class="time-zone">Chile: <span>22:00</span></div>
-          <div class="time-zone">Bolivia: <span>22:00</span></div>
-          <div class="time-zone">EE.UU (ET): <span>21:00</span></div>
-          <div class="time-zone">Colombia: <span>20:00</span></div>
-          <div class="time-zone">Italia: <span>03:00</span></div>
+          <div class="time-zone">Perú: <span>21:00</span></div>
+       <div class="time-zone">México: <span>20:00</span></div>
+<div class="time-zone">Colombia: <span>21:00</span></div>
+<div class="time-zone">Bolivia: <span>22:00</span></div>
+<div class="time-zone">Chile: <span>23:00</span></div>
+<div class="time-zone">Argentina: <span>23:00</span></div>
+<div class="time-zone">EE.UU (ET): <span>22:00</span></div>
+<div class="time-zone">Italia: <span>04:00</span></div>
+
         </div>
 
-        <a href="https://www.tiktok.com/@jorge123760?_t=ZS-90CloMnnhEm&_r=1" class="cta-button">
-          Ven a apoyarnos en TikTok 💖
-        </a>
+<a href="https://www.tiktok.com/@rulito123marce" class="cta-button" target="_blank">
+  Ven a apoyarnos en TikTok soy Rulitos💖 Lideres : Ruben-Skill
+</a>
+
       </div>
     </div>
   </div>
@@ -737,6 +879,31 @@
         
         particlesContainer.appendChild(particle);
       }
+      
+      // Contador regresivo
+      function updateCountdown() {
+        const eventDate = new Date('October 4, 2025 20:00:00').getTime();
+        const now = new Date().getTime();
+        const timeLeft = eventDate - now;
+        
+        if (timeLeft > 0) {
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          
+          document.getElementById('days').textContent = days.toString().padStart(2, '0');
+          document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+          document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+          document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        } else {
+          document.getElementById('countdown').innerHTML = '<div class="subtitle">¡El evento está en vivo ahora!</div>';
+        }
+      }
+      
+      // Actualizar el contador cada segundo
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
     });
   </script>
 </body>
