@@ -80,4 +80,17 @@ SELECT
 FROM MATRICULAS m
 JOIN CARRERA c
     ON m.ID_CARRERA = c.ID_CARRERA;
+    
+    
+    DECLARE
+    base NUMBER := 10;
+    altura NUMBER := 5;
+    area NUMBER;
+BEGIN
+    area := (base * altura) / 2;
+    DBMS_OUTPUT.PUT_LINE('Área del triángulo: ' || area);
+END;
+commit;
+/
+
 
