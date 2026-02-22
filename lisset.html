@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Lisset Dayane 💖</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        width: 350px;
+        position: relative;
+    }
+
+    h1 {
+        color: #ff4d6d;
+    }
+
+    p {
+        color: #444;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4d6d;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e63950;
+        transform: scale(1.05);
+    }
+
+    .heart {
+        position: absolute;
+        color: #ff4d6d;
+        font-size: 20px;
+        animation: float 4s linear infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-300px); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Para Lisset Dayane 💖</h1>
+    <p id="mensaje">
+        Lisset Dayana bb , eres una persona muy atenta conmigo y por eso quiero todo contigo.  
+       Me generas confianza y solamnete quiero estar para ti.
+    </p>
+
+    <button onclick="cambiarMensaje()">Haz clic aquí ✨</button>
+</div>
+
+<script>
+const mensajes = [
+    "el ser atenta y tu forma de ser hacen q me encariñe mucho contigo.",
+    "Y creeme si sigues asi vas hacer q te cuide mucho y este ahi siempre para ti ",
+    "Cada momento contigo q inmterctuo es un gusto para mi ",
+    "Tu mirada transmite paz y tu sonrisa felicidad y creeme me gustas mucho  bb ",
+    "Simplemente eres increíble, Lisset Dayana 💕"
+];
+
+function cambiarMensaje() {
+    const mensaje = document.getElementById("mensaje");
+    const random = Math.floor(Math.random() * mensajes.length);
+    mensaje.innerText = mensajes[random];
+    crearCorazon();
+}
+
+function crearCorazon() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "❤";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = window.innerHeight + "px";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+</script>
+
+</body>
+</html>
